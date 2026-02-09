@@ -25,6 +25,13 @@ These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the
   - : Request uses CORS headers, credentials flag is set to `'include'` and **user credentials** are always included.
 - `""`
   - : Setting the attribute name to an empty value, like `crossorigin` or `crossorigin=""`, is the same as `anonymous`.
+ 
+ ## When to use `crossorigin`
+
+Use the `crossorigin` attribute when loading media or images from a different origin and the resource needs to be accessed by scripts, such as drawing an image to a `<canvas>` element or inspecting media metadata.
+
+If the attribute is omitted, the browser may block script access to the resource due to CORS restrictions, even if the resource loads visually.
+
 
 An invalid keyword and an empty string will be handled as the `anonymous` keyword.
 
